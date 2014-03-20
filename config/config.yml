@@ -1,0 +1,21 @@
+defaults: &defaults
+  application:
+    name: "LeonardoUI"
+    version: "0.0.1"
+    started_at: "20/03/2014"
+    updated_at: "20/03/2014"
+  default_style: "active"
+  ldap:
+    host: "127.0.0.1"
+    port: 000
+    domain: "your domain"
+    default_pwd: "your password"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
