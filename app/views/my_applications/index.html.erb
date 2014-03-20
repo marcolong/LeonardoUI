@@ -1,0 +1,47 @@
+<h1>Listing my_applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Path</th>
+      <th>Git</th>
+      <th>Development</th>
+      <th>Test</th>
+      <th>Authentication</th>
+      <th>Authorization</th>
+      <th>States</th>
+      <th>State</th>
+      <th>Bundle</th>
+      <th>Bundle path</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_applications.each do |my_application| %>
+      <tr>
+        <td><%= my_application.name %></td>
+        <td><%= my_application.path %></td>
+        <td><%= my_application.git %></td>
+        <td><%= my_application.development %></td>
+        <td><%= my_application.test %></td>
+        <td><%= my_application.authentication %></td>
+        <td><%= my_application.authorization %></td>
+        <td><%= my_application.states %></td>
+        <td><%= my_application.state %></td>
+        <td><%= my_application.bundle %></td>
+        <td><%= my_application.bundle_path %></td>
+        <td><%= link_to 'Show', my_application %></td>
+        <td><%= link_to 'Edit', edit_my_application_path(my_application) %></td>
+        <td><%= link_to 'Destroy', my_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My application', new_my_application_path %>

@@ -32,5 +32,16 @@ class Ability
     can :manage, :all if user.role? :admin
     alias_action :batch_action, :to => :update
     can :read, ActiveAdmin::Page, :name => "Dashboard"
+
+    # ----- MYAPPLICATION ----- #
+    can :read, MyApplication if user.role? :guest
+    if user.role? :user
+      can [:read, :create], MyApplication
+      can [:update, :destroy], MyApplication
+    end
+    if user.role? :manager
+      can [:read, :create, :update, :destroy], MyApplication
+    end
+
   end
 end

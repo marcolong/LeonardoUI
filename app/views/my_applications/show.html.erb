@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @my_application.name %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @my_application.path %>
+</p>
+
+<p>
+  <strong>Git:</strong>
+  <%= @my_application.git %>
+</p>
+
+<p>
+  <strong>Development:</strong>
+  <%= @my_application.development %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @my_application.test %>
+</p>
+
+<p>
+  <strong>Authentication:</strong>
+  <%= @my_application.authentication %>
+</p>
+
+<p>
+  <strong>Authorization:</strong>
+  <%= @my_application.authorization %>
+</p>
+
+<p>
+  <strong>States:</strong>
+  <%= @my_application.states %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @my_application.state %>
+</p>
+
+<p>
+  <strong>Bundle:</strong>
+  <%= @my_application.bundle %>
+</p>
+
+<p>
+  <strong>Bundle path:</strong>
+  <%= @my_application.bundle_path %>
+</p>
+
+<%= link_to 'Edit', edit_my_application_path(@my_application) %> |
+<%= link_to 'Back', my_applications_path %>

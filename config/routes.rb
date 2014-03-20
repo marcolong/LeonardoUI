@@ -1,4 +1,6 @@
 LeonardoUI::Application.routes.draw do
+  resources :my_applications
+
   root :to => 'home#index'
   get "home/index"
   devise_for :users, ActiveAdmin::Devise.config

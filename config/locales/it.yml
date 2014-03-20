@@ -183,11 +183,27 @@ it:
 
   activerecord: &activerecord
     models: &models
+      my_application: "My_application"
+      my_applications: "My_applications"
+
     attributes: &attributes
       id: "Id"
       created_at: "Data creazione"
       updated_at: "Data modifica"
       #Attributes zone - do not remove
+      my_application:
+        name: "Name"
+        path: "Path"
+        git: "Git"
+        development: "Development"
+        test: "Test"
+        authentication: "Authentication"
+        authorization: "Authorization"
+        states: "States"
+        state: "State"
+        bundle: "Bundle"
+        bundle_path: "Bundle path"
+
     errors:
       template:
         header:
@@ -225,6 +241,19 @@ it:
     labels:
       <<: *attributes
     hints:
+      my_application:
+        name: "Choose a good Name for this my_application"
+        path: "Choose a good Path for this my_application"
+        git: "Select if this my_application should be Git or not"
+        development: "Select if this my_application should be Development or not"
+        test: "Select if this my_application should be Test or not"
+        authentication: "Select if this my_application should be Authentication or not"
+        authorization: "Select if this my_application should be Authorization or not"
+        states: "Select if this my_application should be States or not"
+        state: "Fill the State with an integer number"
+        bundle: "Select if this my_application should be Bundle or not"
+        bundle_path: "Choose a good Bundle path for this my_application"
+
     actions:
       <<: *actions
   authentication:

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  path: MyString
+  git: false
+  development: false
+  test: false
+  authentication: false
+  authorization: false
+  states: false
+  state: 1
+  bundle: false
+  bundle_path: MyString
+
+two:
+  name: MyString
+  path: MyString
+  git: false
+  development: false
+  test: false
+  authentication: false
+  authorization: false
+  states: false
+  state: 1
+  bundle: false
+  bundle_path: MyString
