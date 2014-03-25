@@ -17,3 +17,4 @@ lib/tasks/files/*
 /*.cmd
 /*.dat
 /config/initializers/secret_token.rb
+/mybundle

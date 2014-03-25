@@ -49,7 +49,9 @@ gem "active_leonardo"
 gem "jquery-turbolinks"
 gem "bourbon"
 gem "rack-mini-profiler", group: :development
-gem "better_errors", group: :development
-gem "awesome_print", group: :development
+gem "better_errors",      group: :development
+gem "binding_of_caller",  group: :development
+gem "awesome_print",      group: :development
 gem "cancan"
 gem "state_machine"
+gem "delayed_job_active_record"
