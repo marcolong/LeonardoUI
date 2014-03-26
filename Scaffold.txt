@@ -1,0 +1,3 @@
+my_application name:string path:string git:boolean development:boolean test:boolean authentication:boolean authorization:boolean states:boolean state:integer bundle:boolean bundle_path:string
+
+my_resource name:string fields:text

@@ -183,6 +183,9 @@ it:
 
   activerecord: &activerecord
     models: &models
+      my_resource: "My_resource"
+      my_resources: "My_resources"
+
       my_application: "My_application"
       my_applications: "My_applications"
 
@@ -191,6 +194,11 @@ it:
       created_at: "Data creazione"
       updated_at: "Data modifica"
       #Attributes zone - do not remove
+      my_resource:
+        name: "Name"
+        fields: "Fields"
+        my_application: "My application"
+
       my_application:
         name: "Name"
         path: "Path"
@@ -241,6 +249,11 @@ it:
     labels:
       <<: *attributes
     hints:
+      my_resource:
+        name: "Choose a good Name for this my_resource"
+        fields: "Choose a good Fields for this my_resource"
+        my_application: "Choose a My application"
+
       my_application:
         name: "Choose a good Name for this my_application"
         path: "Choose a good Path for this my_application"

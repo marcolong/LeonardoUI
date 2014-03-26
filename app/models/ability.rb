@@ -43,5 +43,16 @@ class Ability
       can [:read, :create, :update, :destroy], MyApplication
     end
 
+
+    # ----- MYRESOURCE ----- #
+    can :read, MyResource if user.role? :guest
+    if user.role? :user
+      can [:read, :create], MyResource
+      can [:update, :destroy], MyResource
+    end
+    if user.role? :manager
+      can [:read, :create, :update, :destroy], MyResource
+    end
+
   end
 end

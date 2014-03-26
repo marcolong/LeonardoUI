@@ -1,4 +1,6 @@
 LeonardoUI::Application.routes.draw do
+  resources :my_resources
+
   resources :my_applications
 
   root :to => 'home#index'

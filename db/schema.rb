@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140321153218) do
+ActiveRecord::Schema.define(version: 20140325153759) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,15 +47,32 @@ ActiveRecord::Schema.define(version: 20140321153218) do
   create_table "my_applications", force: true do |t|
     t.string   "name"
     t.string   "path"
-    t.boolean  "git"
-    t.boolean  "development"
-    t.boolean  "test"
-    t.boolean  "authentication"
-    t.boolean  "authorization"
-    t.boolean  "states"
+    t.boolean  "check_git"
+    t.boolean  "check_development"
+    t.boolean  "check_test"
+    t.boolean  "check_authentication"
+    t.boolean  "check_authorization"
+    t.boolean  "check_states"
     t.integer  "state"
-    t.boolean  "bundle"
+    t.boolean  "check_bundle"
     t.string   "bundle_path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "my_resources", force: true do |t|
+    t.string   "name"
+    t.text     "fields"
+    t.integer  "my_application_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "my_resources", ["my_application_id"], name: "index_my_resources_on_my_application_id"
+
+  create_table "myresources", force: true do |t|
+    t.string   "name"
+    t.text     "fields"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

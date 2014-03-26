@@ -31,7 +31,6 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
@@ -44,14 +43,18 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  #gem "rack-mini-profiler"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "awesome_print"
+  gem "quiet_assets"
+end
+
 gem "activeadmin", git: "http://github.com/gregbell/active_admin.git"
 gem "active_leonardo"
 gem "jquery-turbolinks"
 gem "bourbon"
-gem "rack-mini-profiler", group: :development
-gem "better_errors",      group: :development
-gem "binding_of_caller",  group: :development
-gem "awesome_print",      group: :development
 gem "cancan"
 gem "state_machine"
 gem "delayed_job_active_record"
