@@ -18,3 +18,4 @@ lib/tasks/files/*
 /*.dat
 /config/initializers/secret_token.rb
 mybundle
+public

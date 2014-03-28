@@ -12,11 +12,12 @@ begin
     namespace :create do
       desc "Create App"
       task(:my_app, [:app_name, :answers] => :environment) do |task_name,args|
-        puts "Pwd: #{Dir.pwd}"              if DEBUG
-        puts "APP_NAME: #{args[:app_name]}" if DEBUG
-        puts "ANSWERS: #{args[:answers]}"   if DEBUG
         Dir.chdir HOMEROOT do
+          puts "Pwd: #{Dir.pwd}"              if DEBUG
+          puts "APP_NAME: #{args[:app_name]}" if DEBUG
+          puts "ANSWERS: #{args[:answers]}"   if DEBUG
           #TODO aggiungere auth model name come parametro
+          puts "rails new #{args[:app_name]} -m Active_Leonardo/active_template.rb #{args[:answers]}"
           system "rails new #{args[:app_name]} -m Active_Leonardo/active_template.rb #{args[:answers]}"
         end
       end
