@@ -4,6 +4,8 @@ defaults: &defaults
     version: "0.0.1"
     started_at: "20/03/2014"
     updated_at: "20/03/2014"
+    homeroot: "C:/Users/byut2448/Documents/Progetti"
+    template_path: "C:/Users/byut2448/Documents/Progetti/Active_Leonardo"
   default_style: "active"
   ldap:
     host: "127.0.0.1"

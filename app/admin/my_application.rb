@@ -12,7 +12,7 @@ ActiveAdmin.register MyApplication do
       # I should pass a string with y/n instead of true/false
       answers = app.answers_to_yn
       if app.create_app(answers)
-        redirect_to admin_my_applications_path, {:notice => "Creating App...check the log : #{(ActionController::Base.helpers.link_to("log", "/delayed_rake_#{app.name}.log"))}, you can find it in public/delayed_rake.log!".html_safe}
+        redirect_to admin_my_applications_path, {:notice => "Creating App...check the log : #{(ActionController::Base.helpers.link_to("log", "/#{app.name}.log"))}, you can find it in public#{app.name}.log!".html_safe}
       end
     end
   end
